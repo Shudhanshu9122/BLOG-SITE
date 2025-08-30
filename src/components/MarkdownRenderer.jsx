@@ -9,7 +9,15 @@ function MarkdownRenderer({ content }) {
         rehypePlugins={[rehypeRaw, rehypeSanitize]}
         components={{
           img: ({node, ...props}) => (
-            <img {...props} loading="lazy" className={`rounded-xl shadow ${props.className || ''}`} />
+            <img 
+              {...props} 
+              loading="lazy" 
+              className={`rounded-xl shadow ${props.className || ''}`}
+              onError={(e) => { 
+                e.target.style.display = 'none';
+                console.warn('Failed to load image:', e.target.src);
+              }} 
+            />
           ),
           // Custom styling for code blocks
           code({ node, inline, className, children, ...props }) {

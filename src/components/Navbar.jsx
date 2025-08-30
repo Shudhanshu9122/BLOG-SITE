@@ -55,7 +55,7 @@ function Navbar() {
             <div className="relative">
               {/* Logo with multiple layers */}
               <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 transform group-hover:rotate-12">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Blogger.svg/120px-Blogger.svg.png" alt="Logo" className="w-8 h-8 object-contain" loading="eager" />
+                <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" loading="eager" onError={(e) => { e.target.style.display = 'none' }} />
               </div>
 
               {/* Decorative rings */}

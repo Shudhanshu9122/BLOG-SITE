@@ -14,6 +14,7 @@ function Contact() {
             alt="Contact"
             className="w-full h-56 md:h-64 object-cover"
             loading="lazy"
+            onError={(e) => { e.target.src = '/logo.png'; e.target.className = 'w-full h-56 md:h-64 object-contain bg-gray-100 dark:bg-gray-800' }}
           />
         </div>
 

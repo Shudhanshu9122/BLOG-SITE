@@ -5,7 +5,7 @@ function Footer() {
         <div className="text-center">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <div className="w-8 h-8 rounded-lg overflow-hidden shadow">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Blogger.svg/120px-Blogger.svg.png" alt="Logo" className="w-full h-full object-contain" />
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" onError={(e) => { e.target.style.display = 'none' }} />
             </div>
             <span className="text-xl font-bold text-gray-900 dark:text-white">Blog Starter</span>
           </div>

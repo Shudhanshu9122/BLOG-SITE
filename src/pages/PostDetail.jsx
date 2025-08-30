@@ -151,6 +151,13 @@ function PostDetail() {
                 src={post.coverImage || FALLBACK_COVER_IMAGE}
                 alt={post.title}
                 className="w-full h-full object-cover"
+                onError={(e) => { 
+                  e.target.src = FALLBACK_COVER_IMAGE;
+                  if (e.target.src === FALLBACK_COVER_IMAGE) {
+                    e.target.src = '/logo.png';
+                    e.target.className = 'w-full h-full object-contain bg-gray-100 dark:bg-gray-800';
+                  }
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 

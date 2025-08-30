@@ -16,6 +16,7 @@ function About() {
             alt="Workspace"
             className="w-full h-64 md:h-72 object-cover"
             loading="lazy"
+            onError={(e) => { e.target.src = '/logo.png'; e.target.className = 'w-full h-64 md:h-72 object-contain bg-gray-100 dark:bg-gray-800' }}
           />
         </div>
 
